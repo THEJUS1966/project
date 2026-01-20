@@ -11,7 +11,8 @@ import {
 import { LetterPreview } from "@/components/letter-preview";
 import { generateLetterContent } from "@/ai/flows/generate-letter-content";
 import { useToast } from "@/hooks/use-toast";
-import { Feather } from "lucide-react";
+import { Mail } from "lucide-react";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 
 export default function Home() {
   const [generatedLetter, setGeneratedLetter] = useState("");
@@ -74,14 +75,17 @@ export default function Home() {
 
   return (
     <main className="min-h-screen w-full">
+       <div className="absolute top-4 right-4">
+        <ThemeSwitcher />
+      </div>
       <div className="container mx-auto p-4 sm:p-6 md:p-8">
-        <header className="mb-8 text-center">
+        <header className="mb-8 text-center pt-8">
           <div className="inline-flex items-center gap-3 mb-2">
             <div className="p-2 bg-primary/20 rounded-full">
-                <Feather className="h-8 w-8 text-primary-foreground" />
+                <Mail className="h-8 w-8 text-primary-foreground" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold font-headline tracking-tight text-foreground">
-              Letter Perfect
+              Letter Box
             </h1>
           </div>
           <p className="text-muted-foreground max-w-2xl mx-auto">

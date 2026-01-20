@@ -17,7 +17,16 @@ To run this project on your local machine using Visual Studio Code, follow these
     npm install
     ```
 
-4.  **Run the Application:** This project has two parts that need to run simultaneously: the Next.js web application and the Genkit AI server.
+4. **Set up your API Key:** This project uses the Google Gemini API to power its AI features. To use them, you need an API key.
+
+    *   Get an API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
+    *   In your project, find the file named `.env`.
+    *   Open it and replace `YOUR_API_KEY_HERE` with the key you just created.
+    ```
+    GEMINI_API_KEY=YOUR_API_KEY_HERE
+    ```
+
+5.  **Run the Application:** This project has two parts that need to run simultaneously: the Next.js web application and the Genkit AI server.
 
     *   **Start the Web App:** In your first terminal, run:
         ```bash
